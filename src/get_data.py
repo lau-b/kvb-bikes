@@ -22,6 +22,10 @@ db = os.getenv('db')
 password = os.getenv('password')
 
 connection_string = f'postgres://{user}:{password}@{host}:{port}/{db}'
+print(f'{Path(__file__).parent}/.env')
+print(connection_string)
+# connection_string = 'postgres://postgres@localhost:5432/kvb'
+
 engine = create_engine(connection_string)
 
 stations_query = """INSERT INTO kvb_stations
