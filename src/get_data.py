@@ -21,7 +21,7 @@ port = os.getenv('port')
 db = os.getenv('db')
 password = os.getenv('password')
 
-connection_string = f'postgres://{user}:{password}@{host}:{port}/{db}'
+connection_string = f'postgresql://{user}:{password}@{host}:{port}/{db}'
 
 engine = create_engine(connection_string)
 
